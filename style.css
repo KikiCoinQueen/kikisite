@@ -1,0 +1,140 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  /* Background Image */
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('background.webp');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  }
+  
+  /* Header and Profile Picture */
+  header {
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .profile-img {
+    width: 150px;
+    border-radius: 50%;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    color: #fff;
+  }
+  
+  /* Promise Section */
+  .promises {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 800px;
+  }
+  
+  .promises h2 {
+    font-size: 2em;
+    color: #fff;
+  }
+  
+  .promises p {
+    font-size: 1.2em;
+    color: #ccc;
+  }
+  
+  /* Doge Image */
+  .doge-img {
+    text-align: center;
+    margin: 20px auto;
+  }
+  
+  .doge {
+    width: 100px;
+    height: 100px;
+  }
+  
+  /* Contract Section */
+  .contract {
+    text-align: center;
+    margin: 40px auto;
+  }
+  
+  .contract h2 {
+    font-size: 2em;
+  }
+  
+  .contract p {
+    font-size: 1.2em;
+    color: #fff;
+  }
+  
+  .contract a {
+    font-size: 1.2em;
+    color: #ff6600;
+    text-decoration: none;
+  }
+  
+  .contract a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Reaction Video Section */
+  .reaction-video {
+    text-align: center;
+    margin: 30px auto;
+  }
+  
+  .video {
+    width: 80%;
+    max-width: 1000px;
+    border: 5px solid #fff;
+    border-radius: 10px;
+  }
+  
+  /* Twitter Link */
+  .twitter-link {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .twitter-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #1DA1F2; /* Twitter Blue */
+    color: #fff;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+  }
+  
+  .twitter-button:hover {
+    background-color: #1A91DA;
+  }
+  
+  .twitter-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1em;
+    color: #ccc;
+  }
+  
