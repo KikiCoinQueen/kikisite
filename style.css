@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* Global Styles */
 body {
   font-family: 'Press Start 2P', cursive; /* Retro vibes */
@@ -6,6 +12,13 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('media/background.webp') no-repeat center center fixed;
+  background-size: cover;
+  text-align: center; /* Center the text in the body */
 }
 
 /* Background Image */
@@ -149,4 +162,17 @@ footer {
   font-size: 1em;
   color: #ccc;
   font-family: 'Courier New', monospace;
+}
+
+/* Doge Image */
+.doge-img {
+  text-align: center;
+  margin: 30px auto;
+}
+
+.doge {
+  width: 120px;
+  border: 4px dashed #ff6600;
+  border-radius: 20px;
+  animation: spin 4s linear infinite;
 }
