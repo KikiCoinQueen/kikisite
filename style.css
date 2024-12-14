@@ -6,39 +6,63 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  position: relative;
 }
 
-/* Background Stars */
+/* Background Image */
 .background {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  background-image: url('media/background.webp');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
   overflow: hidden;
-  z-index: -2;
 }
 
-.stars {
-  width: 2px;
-  height: 2px;
-  background: #fff;
+/* Shooting Star Animation */
+.shooting-star {
   position: absolute;
-  animation: twinkle 2s infinite ease-in-out;
+  width: 4px;
+  height: 4px;
+  background: #ff6600;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #ff6600, 0 0 20px #ff6600;
+  animation: shooting 2s infinite ease-in-out;
 }
 
-.stars:nth-child(1) { top: 30%; left: 10%; }
-.stars:nth-child(2) { top: 40%; left: 50%; }
-.stars:nth-child(3) { top: 80%; left: 90%; }
-/* Add more .stars for extra sparkles */
-
-@keyframes twinkle {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 1; }
+.shooting-star:nth-child(1) {
+  top: 10%;
+  left: 15%;
+  animation-delay: 0s;
 }
 
-/* Header and Profile */
+.shooting-star:nth-child(2) {
+  top: 40%;
+  left: 60%;
+  animation-delay: 0.5s;
+}
+
+.shooting-star:nth-child(3) {
+  top: 80%;
+  left: 30%;
+  animation-delay: 1s;
+}
+
+@keyframes shooting {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(200px, 600px);
+    opacity: 0;
+  }
+}
+
+/* Header and Profile Picture */
 header {
   text-align: center;
   padding: 50px 0;
@@ -47,7 +71,7 @@ header {
 .profile-img {
   width: 150px;
   border-radius: 50%;
-  border: 3px solid #ff6600;
+  border: 3px solid #ff6600; /* Pop it! */
 }
 
 h1 {
@@ -57,40 +81,72 @@ h1 {
   display: inline-block;
 }
 
-/* Contract Section */
+/* Contract Highlight Section */
 .contract-highlight {
   text-align: center;
   margin: 40px auto;
   max-width: 800px;
-  background-color: rgba(0, 0, 0, 0.8);
+  background: linear-gradient(135deg, #250024, #001f85);
   padding: 20px;
-  border: 3px solid #ff6600;
+  border: 3px solid #fff;
   border-radius: 10px;
+  color: #000; /* High contrast for readability */
+}
+
+.contract-highlight h2 {
+  font-size: 1.8em;
+  color: #fff;
+  text-shadow: 2px 2px 2px #000;
 }
 
 .contract-highlight .shill {
   font-size: 1.2em;
-  color: #ffcc00;
-  font-weight: bold;
+  color: #fff;
 }
 
-/* Doge Image */
-.doge-img {
+/* Grok Section */
+.grok {
+  width: 200px;
+  margin-top: 20px;
+  border: 5px solid #fff;
+}
+
+/* Reaction Video Section */
+.video {
+  width: 80%;
+  max-width: 1000px;
+  border: 5px solid #fff;
+  border-radius: 10px;
+}
+
+/* Twitter Link */
+.twitter-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: #1DA1F2; /* Twitter Blue */
+  color: #fff;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  border: 3px solid #fff;
+}
+
+.twitter-button:hover {
+  background-color: #1A91DA;
+}
+
+.twitter-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+/* Footer */
+footer {
   text-align: center;
-  margin: 20px auto;
+  margin-top: 50px;
+  font-size: 1em;
+  color: #ccc;
+  font-family: 'Courier New', monospace;
 }
-
-.doge {
-  width: 120px;
-  height: 120px;
-  border: 5px solid #ff6600;
-  border-radius: 50%;
-  animation: spin 5s infinite linear;
-}
-
-@keyframes spin {
-  from { transform: rotate(0); }
-  to { transform: rotate(360deg); }
-}
-
-/* Stars are bigger and twinkle across the whole site. */
